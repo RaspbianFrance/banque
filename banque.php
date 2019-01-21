@@ -35,4 +35,3 @@ $pdo = new PDO(
     $database_options
 );
 
-?>
