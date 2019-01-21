@@ -1,4 +1,6 @@
 <?php 
+echo 'Hello World !';
+exit();
 
 session_start();
 
@@ -14,11 +16,11 @@ $utilisateur=$_SESSION['utilisateur'];
 ////////////////////////////////////////////
 //BEFORE USE SITE RUN banque.sql
 ////////////////////////////////////////////
-$database_host = '%dbhost%';
+$database_host = 'wargame_db';
 $database_port = '3306';
-$database_dbname = '%dbname%';
-$database_user = '%dbuser%';
-$database_password = '%dbpass%';
+$database_dbname = 'd610685533';
+$database_user = 'd610685533';
+$database_password = '9ee993bcb0';
 $database_charset = 'UTF8';
 $database_options = [ 
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
