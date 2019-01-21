@@ -8,8 +8,8 @@ if($utilisateur===false)
 }
 else
 {
-	echo "<p>Bienvenue ".$utilisateur['nom']."</p>";
-	echo "<p>Votre solde est de : ".$utilisateur['solde']." € </p>";
+	echo "<p>Bienvenue ".htmlspecialchars($utilisateur['nom'])."</p>";
+	echo "<p>Votre solde est de : ".htmlspecialchars($utilisateur['solde'])." € </p>";
 	if($utilisateur['role']!=='admin')
 	{
 		echo "<p>Envoyer un <a href='message.php'>message au gérant</a>.</p>";
@@ -27,7 +27,7 @@ else
 		echo "<ul>";
 		while($message=$query->fetch())
 		{
-			echo '<li>'.$message['nom'].' : '.$message['contenu'].'</li>';
+			echo '<li>'.htmlspecialchars($message['nom']).' : '.htmlspecialchars($message['contenu']).'</li>';
 		}
 		echo "</ul>";
 	}
