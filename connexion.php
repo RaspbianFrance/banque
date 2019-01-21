@@ -20,7 +20,7 @@ if(isset($_POST['nom']))
 		// La requete SQL a reussie, chercher la première ligne retournée
 		$nouveauUtilisateur=$query->fetch();
 		// Si aucune ligne trouvée... c'est que le nom ou le mot de passe ne sont pas bons.
-		if($nouveauUtilisateur===null)
+		if(!$nouveauUtilisateur)
 		{
 			echo "<p>Connexion échouée.</p>";
 			echo "<p>Banque $nomBanque accorde une grande importance à la sécurité de ses clients.<br/>";
