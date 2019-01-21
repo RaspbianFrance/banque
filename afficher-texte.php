@@ -7,13 +7,11 @@ $fichier=$_GET['fichier'];
 
 $allow = array(
     'emploi.txt',
-    'metions-legales.txt',
+    'mentions-legales.txt',
     'mot-gerant.txt',
 );
 
-var_dump($fichier);
-
-if (!in_array($fichier, $allow))
+if (!in_array($fichier, $allow, true))
 {
     echo '404';
     exit();
