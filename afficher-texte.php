@@ -11,6 +11,8 @@ $allow = array(
     'mot-gerant.txt',
 );
 
+var_dump($fichier);
+
 if (!in_array($fichier, $allow))
 {
     echo '404';
