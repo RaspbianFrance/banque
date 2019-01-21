@@ -5,9 +5,9 @@ require_once 'banque.php';
 if(isset($_POST['nom']))
 {
 	// Construire la requête SQL avec les champs saisis par l'utilisateur dans le formulaire
-	$sql="SELECT * FROM utilisateurs WHERE nom=:nom' AND motdepasse=:motdepasse";
+	$sql="SELECT * FROM utilisateurs WHERE nom=:nom AND motdepasse=:motdepasse";
 
-		// Faire la requête SQL
+	// Faire la requête SQL
 	$query=$pdo->prepare($sql);
 	$query->execute(['nom' => $_POST['nom'], 'motdepasse' => $_POST['motdepasse']]);
 
